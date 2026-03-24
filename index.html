@@ -5,179 +5,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Champaran Chulha | Authentic Handi-Cooked Flavours</title>
     <link rel="stylesheet" href="style.css">
-
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
+    <!-- Phosphor Icons (for cart) -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-
 <body>
-
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="logo-box">
-            <img src="images/logo.jpeg" class="nav-logo">
-            <span class="brand-name">Champaran <span class="accent">Chulha</span></span>
-        </div>
-
-        <div class="nav-links">
-            <a href="#heritage">Our Heritage</a>
-            <a href="#menu">Menu</a>
-            <a href="#gallery">Gallery</a>
-
-            <div class="cart-icon" id="cart-icon">
-                <i class="ph ph-shopping-cart"></i>
-                <span id="cart-badge">0</span>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-box">
+                <img src="logo.jpeg" alt="Champaran Chulha Logo" class="nav-logo">
+                <span class="brand-name">Champaran <span class="accent">Chulha</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#heritage">Our Heritage</a>
+                <a href="#menu">Menu</a>
+                <a href="#gallery">Gallery</a>
+                <div class="cart-icon" id="cart-icon">
+                    <i class="ph ph-shopping-cart"></i>
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="smoke-overlay"></div>
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-        <img src="images/logo.jpeg" class="hero-logo">
-
-        <h1>Champaran <span class="accent">Chulha</span></h1>
-
-        <h2>"Authentic Handi-Cooked Flavours"</h2>
-
-        <p>
-            Slow-cooked Champaran Mutton, Chicken, Fish, and Egg Curries
-            for your family gatherings and events.
-        </p>
-
-        <a href="#menu" class="cta-btn">Order Bulk Curry</a>
-    </div>
-</section>
-
-<!-- TIMINGS -->
-<div class="timings-bar">
-    <div>Cloud Kitchen: 11:00 AM – 10:00 PM</div>
-    <div>Restaurant: 11:00 AM – 11:00 PM</div>
-</div>
-
-<!-- HERITAGE -->
-<section id="heritage" class="heritage">
-    <div class="container heritage-container">
-
-        <div class="heritage-image">
-            <img src="images/our-heritage.png">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="smoke-overlay"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="logo.jpeg" alt="Champaran Chulha Logo" class="hero-logo">
+            <h1 class="hero-title">Champaran <span class="accent">Chulha</span></h1>
+            <h2 class="hero-tagline">"Authentic Handi-Cooked Flavours"</h2>
+            <p class="hero-desc">Slow-cooked Champaran Mutton, Chicken, Fish, and Egg Curries for your family gatherings and events.</p>
+            <a href="#menu" class="cta-btn">Order Bulk Curry</a>
         </div>
+    </section>
 
-        <div class="heritage-text">
-            <span>Our Heritage</span>
-
-            <h2>The Legendary Flavors of Bihar</h2>
-
-            <p>
-                Champaran Chulha brings the legendary flavors of Bihar's
-                traditional handi cooking to Vadodara.
-            </p>
-
-            <p>
-                Each curry is prepared using the age-old technique of sealing
-                the handi with dough and cooking it slowly over a chulha.
-            </p>
-
-            <p>
-                This method locks in aroma, enhances spices and delivers
-                a rich smoky experience.
-            </p>
+    <!-- Timings Bar -->
+    <div class="timings-bar">
+        <div class="timing-item">
+            <i class="ph ph-clock"></i> Cloud Kitchen Timings: <span>11:00 AM – 10:00 PM</span>
         </div>
-
+        <div class="timing-item">
+            <i class="ph ph-storefront"></i> Restaurant Timings: <span>11:00 AM – 11:00 PM</span>
+        </div>
     </div>
-</section>
 
-<!-- MENU -->
-<section id="menu" class="menu">
-    <div class="container">
-        <h2>Our Menu</h2>
-        <div id="menu-sections"></div>
-    </div>
-</section>
-
-<!-- HOW TO ORDER -->
-<section class="how-to-order">
-    <div class="container">
-
-        <h2>How to Order</h2>
-
-        <div class="order-features">
-
-            <div class="order-box">
-                <i class="ph ph-package"></i>
-                <h3>Bulk Only</h3>
+    <!-- Our Heritage Section -->
+    <section id="heritage" class="heritage">
+        <div class="container heritage-container">
+            <div class="heritage-image">
+                <img src="our herritage.png" alt="Our Heritage">
             </div>
-
-            <div class="order-box">
-                <i class="ph ph-clock"></i>
-                <h3>Pre Order</h3>
+            <div class="heritage-text">
+                <span class="section-subtitle">Our Heritage</span>
+                <h2 class="section-title">The Legendary Flavors of Bihar</h2>
+                <div class="heritage-desc">
+                    <p>Champaran Chulha brings the legendary flavors of Bihar's traditional handi cooking to Vadodara. Each curry is prepared using the age-old technique of sealing the handi with dough and cooking it slowly over a chulha.</p>
+                    <p>This method locks in the aroma, enhances the spices, and delivers a rich, smoky experience you won't forget. It's not just food; it's a ritual of patience and passion.</p>
+                </div>
             </div>
-
-            <a href="https://wa.me/916355197823" class="order-box">
-                <i class="ph ph-whatsapp-logo"></i>
-                <h3>WhatsApp Us</h3>
-                <p>6355197823</p>
-            </a>
-
         </div>
+    </section>
 
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <span class="section-subtitle text-center">Our Menu</span>
+            <h2 class="section-title text-center">Authentic Taste for Everyone</h2>
+            
+            <div id="menu-sections">
+                <!-- Dynamically populated via JS to allow cart mapping and categories -->
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Order -->
+    <section class="how-to-order">
+        <div class="container">
+            <h2 class="section-title text-center">How to Order</h2>
+            <div class="order-features">
+                <div class="order-box">
+                    <i class="ph ph-package"></i>
+                    <h3>Bulk Only</h3>
+                    <p>Perfect for families & events</p>
+                </div>
+                <div class="order-box">
+                    <i class="ph ph-clock-countdown"></i>
+                    <h3>Pre-Order</h3>
+                    <p>Needs 3–4 hours preparation</p>
+                </div>
+                <a href="https://wa.me/916355197823" target="_blank" class="order-box" style="display: block;">
+                    <i class="ph ph-whatsapp-logo"></i>
+                    <h3>WhatsApp Us</h3>
+                    <p>6355197823</p>
+                </a>
+            </div>
+            <div class="text-center mt-2">
+                <a href="#menu" class="cta-btn outline">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (The Making) -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title text-center">The Making</h2>
+            <p class="text-center gallery-desc">A glimpse into our slow-cooking process</p>
+            <div class="masonry-grid">
+                <div class="grid-item empty"><i>(Image Placeholder)</i></div>
+                <div class="grid-item empty"><i>(Image Placeholder)</i></div>
+                <div class="grid-item empty"><i>(Image Placeholder)</i></div>
+                <div class="grid-item empty"><i>(Image Placeholder)</i></div>
+                <div class="grid-item empty"><i>(Image Placeholder)</i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <img src="logo.jpeg" alt="Champaran Chulha" class="footer-logo">
+                <h3 class="footer-title">Champaran <span class="accent">Chulha</span></h3>
+                <p class="footer-tagline">Authentic Handi-Cooked Flavours</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <i class="ph ph-map-pin accent"></i>
+                        <p>FF, Siddharth Square<br>Above Panasonic, Malhar Point<br>O.P. Road, Vadodara, Gujarat</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph ph-phone accent"></i>
+                        <p><a href="tel:6355197823">6355197823</a></p>
+                    </div>
+                </div>
+                <div class="footer-map">
+                    <iframe class="dark-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.4347746760813!2d73.1554901!3d22.2993883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc8aba8709ca1%3A0xe6bf4dc12e2c4636!2sMalhar%20Point!5e0!3m2!1sen!2sin!4v1711283626359!5m2!1sen!2sin" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <h4 class="coming-soon">Coming soon to all major cities of Gujarat</h4>
+            <p class="copyright">&copy; 2025 Champaran Chulha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="close-cart"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Items populated via JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-totals">
+                <span>Total Items: <strong id="cart-total-items">0</strong></span>
+                <span>Total Amount: <strong id="cart-total-price">₹0</strong></span>
+            </div>
+            <button class="checkout-btn" id="proceed-checkout">Proceed to Checkout</button>
+        </div>
     </div>
-</section>
 
-<!-- GALLERY -->
-<section id="gallery" class="gallery">
-    <div class="container">
-        <h2>The Making</h2>
-
-        <div class="masonry-grid">
-            <div>(Image)</div>
-            <div>(Image)</div>
-            <div>(Image)</div>
+    <!-- Checkout Modal -->
+    <div class="checkout-modal-overlay" id="checkout-modal">
+        <div class="checkout-box">
+            <button class="close-checkout" id="close-checkout"><i class="ph ph-x"></i></button>
+            <h2>Delivery Details</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="cust-name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="cust-phone" required placeholder="+91 XXXXXXXXXX">
+                </div>
+                <div class="form-group">
+                    <label>Delivery Address</label>
+                    <textarea id="cust-address" rows="3" required placeholder="Complete address"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Special Instructions</label>
+                    <textarea id="cust-instructions" rows="2" placeholder="e.g. Less spicy, extra onions"></textarea>
+                </div>
+                <button type="submit" class="submit-order-btn">Place Order (COD)</button>
+            </form>
         </div>
     </div>
-</section>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="container footer-container">
-
-        <div>
-            <img src="images/logo.jpeg" class="footer-logo">
-            <h3>Champaran Chulha</h3>
-            <p>Authentic Handi-Cooked Flavours</p>
-        </div>
-
-        <div>
-            <p>
-                FF, Siddharth Square<br>
-                Above Panasonic, Malhar Point<br>
-                Vadodara
-            </p>
-
-            <p>📞 6355197823</p>
-
-            <iframe 
-                src="https://www.google.com/maps?q=malhar%20point%20vadodara&output=embed"
-                width="100%" height="200">
-            </iframe>
-        </div>
-
+    <!-- Add to Cart Popup -->
+    <div id="cart-popup" class="cart-popup">
+        <span class="popup-text">Item added to cart</span>
+        <button id="popup-go-cart" class="popup-btn">Go to Cart</button>
+        <button id="popup-close" class="popup-close" aria-label="Close"><i class="ph ph-x"></i></button>
     </div>
 
-    <p style="text-align:center;">
-        Coming soon to all major cities of Gujarat
-    </p>
-</footer>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
