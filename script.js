@@ -341,22 +341,68 @@ function closeCheckoutModal() {
 }
 
 // Event Listeners
-cartIcon.addEventListener('click', openCart);
-closeCartBtn.addEventListener('click', closeCart);
-cartOverlay.addEventListener('click', closeCart);
+// --- SAFE EVENT LISTENERS (FIXED) ---
 
-proceedCheckoutBtn.addEventListener('click', openCheckout);
-closeCheckoutBtn.addEventListener('click', closeCheckoutModal);
+if (cartIcon) cartIcon.addEventListener('click', openCart);
+if (closeCartBtn) closeCartBtn.addEventListener('click', closeCart);
+if (cartOverlay) cartOverlay.addEventListener('click', closeCart);
 
-popupGoCart.addEventListener('click', () => {
-    cartPopup.classList.remove('show');
-    openCart();
-});
+if (proceedCheckoutBtn) proceedCheckoutBtn.addEventListener('click', openCheckout);
+if (closeCheckoutBtn) closeCheckoutBtn.addEventListener('click', closeCheckoutModal);
 
-popupClose.addEventListener('click', () => {
-    cartPopup.classList.remove('show');
-});
+if (popupGoCart) {
+    popupGoCart.addEventListener('click', () => {
+        if (cartPopup) cartPopup.classList.remove('show');
+        openCart();
+    });
+}
 
+if (popupClose) {
+    popupClose.addEventListener('click', () => {
+        if (cartPopup) cartPopup.classList.remove('show');
+    });
+}
+
+if (checkoutForm) {
+    checkoutForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('cust-name')?.value.trim();
+        const phone = document.getElementById('cust-phone')?.value.trim();
+        const address = document.getElementById('cust-address')?.value.trim();
+        const instructions = document.getElementById('cust-instructions')?.value.trim() || 'None';
+
+        const totalAmt = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+        let msg = `Hey Champaran Chulha, I would like to order.\n\n*Order Details:*\n`;
+
+        cart.forEach(item => {
+            const prcToken = item.price > 0 ? `₹${item.price * item.quantity}` : 'MRP';
+            msg += `- ${item.quantity}x ${item.title} (${item.weight}) : ${prcToken}\n`;
+        });
+
+        msg += `\n*Total Amount: ₹${totalAmt}*\n\n`;
+        msg += `*Delivery Details:*\n`;
+        msg += `Name: ${name}\n`;
+        msg += `Phone: ${phone}\n`;
+        msg += `Address: ${address}\n`;
+        msg += `Instructions: ${instructions}`;
+
+        const encodedMsg = encodeURIComponent(msg);
+        const waNumber = '916355197823';
+        const waURL = `https://wa.me/${waNumber}?text=${encodedMsg}`;
+
+        window.open(waURL, '_blank');
+
+        const oldCart = [...cart];
+        cart = [];
+        saveCart();
+        oldCart.forEach(item => renderProductActionUI(item.id, item.weight));
+
+        closeCheckoutModal();
+        checkoutForm.reset();
+    });
+}
 // Checkout Submission
 checkoutForm.addEventListener('submit', function(e) {
     e.preventDefault();
